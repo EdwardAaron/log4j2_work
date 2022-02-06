@@ -1,0 +1,2 @@
+org.apache.logging.log4j.LogManager
+    :主要通过LogManager.getLogger()来获取名称为class的Logger

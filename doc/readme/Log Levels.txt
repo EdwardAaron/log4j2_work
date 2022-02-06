@@ -1,0 +1,4 @@
+内置的logger level包含如下几个
+    :ALL, TRACE,DEBUG, INFO, WARN, ERROR, FATAL, and OFF
+    ALL,OFF通常不用
+也可以自定义logger level

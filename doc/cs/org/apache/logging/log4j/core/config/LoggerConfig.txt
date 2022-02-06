@@ -1,0 +1,6 @@
+org.apache.logging.log4j.core.config.LoggerConfig
+    :对应于配置文件中的Logger元素
+    :通过LoggerConfig来创建Logger
+    :名字为com.foo的LoggerConfig是名字为com.foo.bar的LoggerConfig的parent
+    :LoggerConfig包含一个对Level的引用，Logger因此获取日志level。
+    如果Logger对应的LoggerConf没有配置level，则使用其LoggerConf的parent的设置，依次类推

@@ -1,0 +1,3 @@
+org.apache.logging.log4j.LogManager
+    :Logger getLogger(param)
+        当param相同时候，获取的Logger是同一个

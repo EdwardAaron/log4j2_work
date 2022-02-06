@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn" name="MyApp" packages="">
+    <Appenders>
+        <!--
+            RollingFile:滚动打印日志
+            name:appender的名字
+            fileName:日志名称
+            filePattern:滚动日志的样式
+        -->
+        <RollingFile name="RollingFile" fileName="target/logs/app.log"
+                     filePattern="target/logs/app-%d{MM-dd-yy-HH-mm}.log.gz">
+            <!--
+                配置在appender下的filter
+            -->
+            <BurstFilter level="INFO" rate="16" maxBurst="100"/>
+            <PatternLayout>
+                <pattern>%d %p %c{1.} [%t] %m%n</pattern>
+            </PatternLayout>
+            <TimeBasedTriggeringPolicy />
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="RollingFile"/>
+        </Root>
+    </Loggers>
+</Configuration>

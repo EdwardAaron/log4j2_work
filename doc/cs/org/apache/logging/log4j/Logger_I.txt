@@ -1,0 +1,10 @@
+org.apache.logging.log4j.Logger
+    :一般情况下，一个类使用自己独有的Logger
+    :logger=LogManager.getLogger(LogManager.ROOT_LOGGER_NAME)或者
+            logger = LogManager.getRootLogger()，
+            该logger为root logger，且总是存在，且为每个层次关系中的一部分
+    :每一个Logger都有一个LoggerConfig引用(有可能是LoggerConf的parent，。。。)
+
+方法：
+    logger.printf(level,formatMessage,params):打印日志，
+    等效与LoggerManager.getFormatterLogger().xx(formatMessage,params)

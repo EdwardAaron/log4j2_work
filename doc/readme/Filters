@@ -1,0 +1,14 @@
+Filters用于过滤日志事件
+
+Filters may be configured in one of four locations:
+    1. Context-wide Filters are configured directly in the configuration. Events that are rejected by
+    these filters will not be passed to loggers for further processing. Once an event has been accepted
+    by a Context-wide filter it will not be evaluated by any other Context-wide Filters nor will the
+    Logger's Level be used to filter the event. The event will be evaluated by Logger and Appender
+    Filters however.
+    2. Logger Filters are configured on a specified Logger. These are evaluated after the Contextwide Filters and the Log Level for the Logger. Events that are rejected by these filters will be
+    discarded and the event will not be passed to a parent Logger regardless of the additivity setting.
+    3. Appender Filters are used to determine if a specific Appender should handle the formatting and
+    publication of the event.
+    4. Appender Reference Filters are used to determine if a Logger should route the event to an
+    appender.

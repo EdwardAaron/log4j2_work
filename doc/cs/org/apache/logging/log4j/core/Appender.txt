@@ -1,0 +1,4 @@
+org.apache.logging.log4j.core.Appender extends LifeCycle
+    :Appender对应一个输出路径
+    :可以添加多个Appender到Logger上(通过LoggerConfig)
+    :Appender可以通过LoggerConfig层次来继承

@@ -1,0 +1,21 @@
+说明:
+    %d: 打印时间，精确到毫秒
+    %d{MM-dd-yy-HH-mm-ss}:以指定格式打印时间
+    %r：系统启动后经过的毫秒数
+    %t: 打印日志的线程名称
+    %-5p:日志级别
+    %c:打印日志的代码的全路径名
+    %C{3}:打印日志的代码的后3级径名，{3}省略则等同于%c
+    %C{1.}:打印的包名只包含前面的一个字符，例如包com.dong.org,打印为c.d.o
+    %m:日志的信息
+    %n:换行
+    %F:文件名称
+    %L:打印日志的代码做在行(源码中)
+示例:
+    "%r [%t] %-5p %c - %m%n"
+    对应的输出如下
+    176 [main] INFO org.foo.Bar - Located nearest gas station.
+
+    "%d %-5p [%t] %C{2} (%F:%L) - %m%n"
+    对应的输出如下
+    2021-12-30 19:10:54,377 INFO  [main] log4j.LoggerTest (LoggerTest.java:18) - hello ,lucia

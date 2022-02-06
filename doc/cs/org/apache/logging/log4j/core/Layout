@@ -1,0 +1,1 @@
+org.apache.logging.log4j.core.Layout<T extends Serializable> extends Encoder<LogEvent>

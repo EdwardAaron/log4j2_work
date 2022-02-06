@@ -1,0 +1,7 @@
+jdk1.8中，可以通过一下来实现lazy logging(user.getName()只调用一次)
+    logger.debug("hello {}",()-user.getName());
+该方式等效于
+    if(logger.isDebugEnabled())
+        {
+            logger.debug("hello {}",user.getName());
+        }

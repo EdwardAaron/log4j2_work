@@ -1,0 +1,3 @@
+org.apache.logging.log4j.spi.LoggerContext
+    :日志实现的锚点
+    :在一个app下面可以有多个活跃的LoggerContext
